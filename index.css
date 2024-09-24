@@ -17,6 +17,7 @@ html {
     box-sizing: inherit;
 }
 
+
 body {
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
@@ -91,10 +92,23 @@ img {
 
 .seleccion {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 3rem;
 }
+
+@media (min-width: 768px) {
+    .seleccion {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+
+
+
 
 .boton {
     font-family: var(--fuenteHeading);
@@ -107,4 +121,59 @@ img {
     font-weight: 700;
     margin-bottom: 2rem;
     border-radius: 0.6rem;
+}
+
+.shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    border: 2px solid rgba(255, 255, 0, 0.9);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%,
+        21% 91%, 32% 57%, 2% 35%, 39% 35%
+    );
+    animation: fall linear infinite, glow 1.5s ease-in-out infinite alternate, blink 1s ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0.2; /* Mantener algo de opacidad */
+    }
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
 }
