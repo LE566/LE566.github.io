@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Map</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Api Key: AIzaSyDjwnOlLJqhvexz7gLMqYseyhwBCf2y70w -->
+    <h1>Mapa Estatico</h1>
+    <div id="map"></div>
+
+    <script src="../backend/staticMap.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjwnOlLJqhvexz7gLMqYseyhwBCf2y70w&loading=async&loading=async&callback=initMap">
+    </script>
+</body>
+</html>
