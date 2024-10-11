@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5; /* Color de fondo suave */
+}
+
+#appposts {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ol {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+}
+
+li {
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.2s;
+}
+
+li:hover {
+    background: #e9ecef; /* Color al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.email {
+    font-weight: bold;
+    color: #007bff; /* Color azul para el email */
+}
+
+.comment-body {
+    margin-top: 5px; /* Espaciado entre email y cuerpo del comentario */
+    color: #555; /* Color gris para el cuerpo del comentario */
+    line-height: 1.5; /* Mejora la legibilidad */
+}
+
+@media (max-width: 600px) {
+    #appposts {
+        width: 90%; /* Ancho del contenedor en pantallas pequeñas */
+    }
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente para el cuerpo */
+    background-color: #f4f4f4; /* Color de fondo */
+    margin: 0;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina los espacios entre las celdas */
+    margin-top: 20px; /* Espacio superior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para la tabla */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Para que los bordes redondeados funcionen */
+}
+
+th, td {
+    border: none; /* Sin bordes en celdas */
+    padding: 15px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+}
+
+th {
+    background-color: #4CAF50; /* Color de fondo para el encabezado */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Negrita para el encabezado */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo alternativo para filas pares */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Color de fondo al pasar el mouse */
+}
+
+td {
+    background-color: white; /* Color de fondo de las celdas */
+}
